@@ -18,9 +18,7 @@ Mehdi Meguenani 3ICS
 
 # Exercice 3. Expressions rationnelles
 
-''' #!/bin/bash
-
-
+``` #!/bin/bash
 
 function is_number()
 {
@@ -35,4 +33,4 @@ fi
 is_number $1
 
 echo "$?"
-'''
+```
