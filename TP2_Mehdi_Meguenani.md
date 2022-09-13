@@ -16,6 +16,7 @@ Mehdi Meguenani 3ICS
 # Exercice 2. Contrôle de mot de passe
 
 ```
+#!/bin/bash
 PASSWORD=test123
 read -p 'Saisissez un mot de passe : ' -s pass
 if [ $pass = $PASSWORD ]; then
@@ -29,7 +30,8 @@ fi
 
 # Exercice 3. Expressions rationnelles
 
-``` #!/bin/bash
+``` 
+#!/bin/bash
 
 function is_number()
 {
