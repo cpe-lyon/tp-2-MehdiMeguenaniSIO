@@ -1,0 +1,38 @@
+Mehdi Meguenani 3ICS
+
+# Exercice 1. Variables d’environnement 
+
+1. Photo 
+2. La variable d'environement qui permet a cd de nous renvoyer vers le répertoire est $HOME 
+3. La variable LANG détermine la langue utilisé par le système afin de communiquer avec l'utilisateur. La variable PWD permet de lister le répertoire qui est utilisé. La variable OLDPWD permet enregistre le répertoire précédent et donc d'y accèder a l'aide de cd-. La commande shell interprète les commande de l'utilisateur 
+4. Photo 
+5. La commande bash permet de créer un nouveau shell , la variable $MY_VAR n'existe pas car c'est une variable local que l'on a créer dans un autres session
+6. En la transformant en variable d'environement la variable est disponible a partir de tous les shell ou interpréteur.
+7. Photo. 
+8. Il faut ecire echo "Bonjour a vous, $NOM" (Photo)
+9. En faisant usnet on supprime totalement la varianble, elle n'existe plus. Si la varaible est vide elle existe toujours mais ne renverra rien.
+10. (PHOTO)
+
+# Exercice 2. Contrôle de mot de passe
+
+
+# Exercice 3. Expressions rationnelles
+
+''' #!/bin/bash
+
+
+
+function is_number()
+{
+re='^[+-]?[0-9]+([.][0-9]+)?$'
+if ! [[ $1 =~ $re ]] ; then
+        return 1
+else
+        return 0
+fi
+}
+
+is_number $1
+
+echo "$?"
+'''
