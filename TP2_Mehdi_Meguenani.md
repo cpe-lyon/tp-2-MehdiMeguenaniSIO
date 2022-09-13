@@ -47,3 +47,5 @@ is_number $1
 
 echo "$?"
 ```
+# Exercice 4. Contrôle d’utilisateur
+
