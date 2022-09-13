@@ -15,6 +15,17 @@ Mehdi Meguenani 3ICS
 
 # Exercice 2. Contrôle de mot de passe
 
+```
+PASSWORD=test123
+read -p 'Saisissez un mot de passe : ' -s pass
+if [ $pass = $PASSWORD ]; then
+        echo "C'est le bon mot de passe"
+else
+        echo "Se n'est pas le bon mot de passe"
+fi
+
+```
+
 
 # Exercice 3. Expressions rationnelles
 
