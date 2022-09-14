@@ -71,6 +71,17 @@ test $1
 
 # Exercice 5. Factorielle
 
+```
+#!/bin/bash
+facto=1
+for i in $(seq 1 $1)
+do 
+       resultat=$(( $facto * $i ))
+       facto=$boucle
+done
+
+echo "$boucle"
+```
 
 
 
