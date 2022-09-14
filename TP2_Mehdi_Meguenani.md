@@ -54,9 +54,9 @@ echo "$?"
 #!/bin/bash
 function test(){
         if  [ -z $1 ]: then
-                echo "$0, nom utilisateur"
+                echo "Utilisation : $0, nom utilisateur"
         else
-                grep "^$1" /etc/passwd > test1
+                grep -F "$1" /etc/passwd > test1
                         if [ $? != 0 ]; then
                                echo "L'utilisateur n'exsite pas " 
                         else 
