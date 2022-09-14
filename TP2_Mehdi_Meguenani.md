@@ -77,10 +77,10 @@ facto=1
 for i in $(seq 1 $1)
 do 
        resultat=$(( $facto * $i ))
-       facto=$boucle
+       facto=$resultat
 done
 
-echo "$boucle"
+echo "$resultat"
 ```
 
 
