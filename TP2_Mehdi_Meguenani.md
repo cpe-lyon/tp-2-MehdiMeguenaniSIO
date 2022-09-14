@@ -49,3 +49,25 @@ echo "$?"
 ```
 # Exercice 4. Contrôle d’utilisateur
 
+```
+
+#!/bin/bash
+function test(){
+        if  [ -z $1 ]: then
+                echo "$0, nom utilisateur"
+        else
+                grep "^$1" /etc/passwd > test1
+                        if [ $? != 0 ]; then
+                               echo "L'utilisateur n'exsite pas " 
+                        else 
+                                echo "L'utilisateur existe "
+                        fi
+       fi
+}
+
+test $1 
+
+```
+
+
+
