@@ -83,5 +83,31 @@ done
 echo "$resultat"
 ```
 
+# Exercice 6. Le juste prix
+
+```
+#!/bin/bash
+nombre=$RANDOM
+read -p "Saisissez un chiffre ! " chiffre
+while [ $chiffre != $nombre ]
+do
+        if [ $chiffre -gt $nombre ]; then
+                echo "C'est moins"
+        fi
+        
+        if [ $chiffre -lt $nombre ]; then
+                echo "C'est plus"
+        fi
+        read -p "Saisissez un chiffre ! " chiffre
+done
+
+echo "C'est gagné ! "
+
+                
+echo "$resultat"
+```
+
+
+
 
 
