@@ -102,9 +102,6 @@ do
 done
 
 echo "C'est gagné ! "
-
-                
-echo "$resultat"
 ```
 
 
