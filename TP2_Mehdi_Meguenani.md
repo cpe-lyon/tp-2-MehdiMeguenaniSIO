@@ -103,6 +103,69 @@ done
 
 echo "C'est gagné ! "
 ```
+# Exercice 7.1 Statistiques
+
+```
+#!/bin/bash
+ 
+error=0
+max=0
+min=0
+moyenne=0
+
+function is_number()
+{
+re='^[+-]?[0-9]+([.][0-9]+)?$'
+if ! [[ $1 =~ $re ]] ; then
+        return 1
+else
+        return 0
+fi
+}
+
+function max(){
+        if { $1 -gt $2}; then
+                max=$1
+        elif { $3 -gt $1 }; then
+                max=$3
+        else
+                max=$2
+        fi
+}
+
+function min(){
+        if [ $1 -lt $2 ]; then
+                min=$1
+        elif [ $3 -gt $1 ]; then
+                min=$3
+        else
+                min=$2
+        fi
+}
+
+function moyenne(){
+        moyenne=$((( $1 + $2 + $3 ) / 3 ))
+}
+
+min $1 $2 $3
+max $1 $2 $3
+moyenne $1 $2 $3
+
+while (("$#"));
+do
+        is_number $1
+        if [ $? = 1 ] || [ $1 -gt 100 ] || [ $1 -lt -100 ]; then
+                echo "Veuillez saisir des nombres compris entre 100 et -100"
+                exit
+        fi
+        shift
+done
+
+echo "Le minimum est $min"
+echo "Le maximum est $max"
+echo "La moyenne est $moyenne"
+```
+
 
 
 
