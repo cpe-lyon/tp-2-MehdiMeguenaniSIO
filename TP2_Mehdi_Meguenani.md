@@ -164,10 +164,166 @@ done
 echo "Le minimum est $min"
 echo "Le maximum est $max"
 echo "La moyenne est $moyenne"
+
+
 ```
 
+# Exercice 7.2 Statistiques
+
+```
+#!/bin/bash
+ 
+max=0
+min=$1
+moyenne=0
+param=0
+count=0
+sum=0
+
+function is_number()
+{
+re='^[+-]?[0-9]+([.][0-9]+)?$'
+if ! [[ $1 =~ $re ]] ; then
+        return 1
+else
+        return 0
+fi
+}
+
+function max(){
+        if { $1 -gt $max}; then
+                max=$1
+        fi
+}
+
+function min(){
+        if [ $1 -lt $min ]; then
+                min=$1
+        fi
+}
 
 
 
+
+
+function moyenne(){
+        moyenne=$((( $1 + $2 + $3 ) / 3 ))
+}
+
+min $1 $2 $3
+max $1 $2 $3
+moyenne $1 $2 $3
+
+while (("$#"));
+do
+        is_number $1
+        if [ $? = 1 ] || [ $1 -gt 100 ] || [ $1 -lt -100 ]; then
+                echo "Veuillez saisir des nombres compris entre 100 et -100"
+                exit
+        fi
+        param=$(( $1 + $param ))
+        sum=$param
+        min $1
+        max $1
+        count=$(( $count + 1 ))
+        shift
+done
+
+function moyenne(){
+        moyenne=$(( $sum / $count ))
+}
+
+moyenne
+
+echo "Le minimum est $min"
+echo "Le maximum est $max"
+echo "La moyenne est $moyenne"
+
+
+
+```
+
+# Exercice 7.3 Statistiques
+
+```
+#!/bin/bash
+ 
+max=0
+moyenne=0
+param=0
+sum=0
+tab=()
+index=0
+
+read -p "Colmbien de note voulez vous saisir ? " nbr
+
+function is_number()
+{
+re='^[+-]?[0-9]+([.][0-9]+)?$'
+if ! [[ $1 =~ $re ]] ; then
+        return 1
+else
+        return 0
+fi
+}
+
+function tableau(){
+        for i in $(seq 1 $nbr)
+        do
+                read -p "Saisi votre note numéro $i " note
+                tab[$index]=$note
+                index=$(( $index + 1 ))
+        done
+ }
+ 
+ tableau
+ 
+ min=${tab[0]}
+
+function max(){
+        local index=0
+        for l in $(seq l $nbr)
+        do
+                if [ ${tab[index]} -gt $max ]; then
+                        max=${tab[$index]}
+                fi
+                index=$(( $index + 1 ))
+        done
+        echo "Le maximum est $max"
+}
+
+max
+
+function min(){
+        local index=0
+        for l in $(seq l $nbr)
+        do
+                if [ ${tab[index]} -gt $min ]; then
+                        min=${tab[$index]}
+                fi
+                index=$(( $index + 1 ))
+        done
+        echo "Le maximum est $min"
+}
+
+
+min
+
+
+function moyenne(){
+        local index=0
+        for l in $(seq l $nbr)
+        do
+                param=$(( $param + ${tab[$index]} ))
+                sum=$param
+                index=$(( $index + 1 ))
+        done
+        echo "La moyenne est $moyenne "
+}
+
+moyenne
+
+
+```
 
 
