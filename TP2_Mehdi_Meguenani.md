@@ -2,10 +2,10 @@ Mehdi Meguenani 3ICS
 
 # Exercice 1. Variables d’environnement 
 
-1. Photo 
+1. ![ScreenShotQuestion8](./assetp2/Q1.png)
 2. La variable d'environement qui permet a cd de nous renvoyer vers le répertoire est $HOME 
 3. La variable LANG détermine la langue utilisé par le système afin de communiquer avec l'utilisateur. La variable PWD permet de lister le répertoire qui est utilisé. La variable OLDPWD permet enregistre le répertoire précédent et donc d'y accèder a l'aide de cd-. La commande shell interprète les commande de l'utilisateur 
-4. Photo 
+4. ![ScreenShotQuestion8](./assetp2/Q4.png)
 5. La commande bash permet de créer un nouveau shell , la variable $MY_VAR n'existe pas car c'est une variable local que l'on a créer dans un autres session
 6. En la transformant en variable d'environement la variable est disponible a partir de tous les shell ou interpréteur.
 7. ![ScreenShotQuestion8](./assetp2/Q7.1.png)
@@ -70,6 +70,7 @@ function test(){
 test $1 
 
 ```
+![ScreenShotExercice71](./assetp2/Exo4.PNG) 
 
 # Exercice 5. Factorielle
 
@@ -84,12 +85,13 @@ done
 
 echo "$resultat"
 ```
+![ScreenShotExercice71](./assetp2/Exo5.PNG) 
 
 # Exercice 6. Le juste prix
 
 ```
 #!/bin/bash
-nombre=$RANDOM
+nombre=$(($RANDOM% 1000))
 read -p "Saisissez un chiffre ! " chiffre
 while [ $chiffre != $nombre ]
 do
@@ -105,6 +107,7 @@ done
 
 echo "C'est gagné ! "
 ```
+![ScreenShotExercice71](./assetp2/Captur.PNG) 
 # Exercice 7.1 Statistiques
 
 ```
