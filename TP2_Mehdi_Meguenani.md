@@ -247,6 +247,9 @@ echo "La moyenne est $moyenne"
 
 ```
 
+![ScreenShotExercice72](./assetp2/Exo72.PNG) 
+
+
 # Exercice 7.3 Statistiques
 
 ```
@@ -329,5 +332,7 @@ moyenne
 
 
 ```
+![ScreenShotExercice72](./assetp2/Exo71.PNG) 
+
 
 
