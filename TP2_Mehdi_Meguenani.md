@@ -9,9 +9,9 @@ Mehdi Meguenani 3ICS
 5. La commande bash permet de créer un nouveau shell , la variable $MY_VAR n'existe pas car c'est une variable local que l'on a créer dans un autres session
 6. En la transformant en variable d'environement la variable est disponible a partir de tous les shell ou interpréteur.
 7. Photo. 
-8. Il faut ecire echo "Bonjour a vous, $NOM" (Photo)
+8. Il faut ecire echo "Bonjour a vous, $NOM" ![ScreenShotQuestion8](/assetp2/Q8.PNG)
 9. En faisant usnet on supprime totalement la varianble, elle n'existe plus. Si la varaible est vide elle existe toujours mais ne renverra rien.
-10. (PHOTO)
+10. ![ScreenShotQuestion10](/assetp2/Q10.PNG)
 
 # Exercice 2. Contrôle de mot de passe
 
