@@ -168,6 +168,8 @@ echo "Le maximum est $max"
 echo "La moyenne est $moyenne"
 
 
+![ScreenShotExercice71](./assetp2/Exo7.png) 
+
 ```
 
 # Exercice 7.2 Statistiques
