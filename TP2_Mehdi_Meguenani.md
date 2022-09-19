@@ -70,7 +70,7 @@ function test(){
 test $1 
 
 ```
-![ScreenShotExercice71](./assetp2/Exo4.PNG) 
+![ScreenShotExercice71](./assetp2/Exo41.PNG) 
 
 # Exercice 5. Factorielle
 
